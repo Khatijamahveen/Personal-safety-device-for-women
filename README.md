@@ -229,30 +229,6 @@ This repository is included in my portfolio to demonstrate my **practical exposu
 
 ---
 
-# Skills & Technical Exposure
-
-### Embedded Systems
-
-`ESP32` · `ESP32-CAM` · `Embedded C/C++` · `Arduino IDE`
-
-### Sensors & Interfaces
-
-`MPU6050` · `GPS` · `UART` · `I²C`
-
-### Communication
-
-`GSM` · `Wi-Fi` · `Telegram`
-
-### IoT & Edge Intelligence
-
-`IoT` · `TinyML` · `Edge AI` · `Voice Recognition`
-
-### Engineering
-
-`Sensor Integration` · `Hardware–Software Integration` · `System Testing` · `Technical Documentation`
-
----
-
 # Engineering Concepts Explored
 
 ### Sensor Integration
@@ -433,18 +409,6 @@ These experiences complement my broader interests in:
 
 ---
 
-# Project Documentation
-
-The repository contains the academic project report:
-
-```text
-ProjectReport.pdf
-```
-
-The report provides the detailed documentation accompanying the implementation.
-
----
-
 # Repository Structure
 
 ```text
@@ -469,14 +433,6 @@ Personal-safety-device-for-women/
 ├── ProjectReport.pdf
 └── README.md
 ```
-
----
-
-# Technical Interests
-
-My broader technical interests include:
-
-**Embedded Systems** · **IoT** · **Edge AI** · **TinyML** · **Real-Time Systems** · **Communication Systems** · **Hardware–Software Co-Design** · **Intelligent Connected Devices**
 
 ---
 
