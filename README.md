@@ -1,205 +1,334 @@
 # Personal Safety Device for Women
 
-## 📌 Overview
-
-This repository documents a **collaborative M.E. Embedded Systems project** focused on the development of a personal safety device integrating **embedded systems, IoT communication, sensing, location tracking, and wireless alert mechanisms**.
-
-The project combines an **ESP32-S3, ESP32-CAM, MPU6050, GPS, GSM, microphone, Wi-Fi, and TinyML-based voice recognition** to explore multiple approaches for detecting and communicating emergency situations.
-
-> **Project Type:** Collaborative M.E. Embedded Systems Project
-> **Role:** Contributing Team Member
-> **Primary Project Development:** Led by a colleague
+> **A collaborative M.E. Embedded Systems project exploring sensor-based monitoring, IoT connectivity, wireless communication, and edge intelligence for a safety-oriented embedded application.**
 
 ---
 
-## 🤝 My Contribution
+## 📌 Project at a Glance
 
-I was a **contributing team member** in this project and do not claim sole ownership of the overall design or implementation.
+| Category                    | Details                                     |
+| --------------------------- | ------------------------------------------- |
+| **Project Type**            | Collaborative M.E. Embedded Systems Project |
+| **Domain**                  | Embedded Systems & IoT                      |
+| **Primary Platforms**       | ESP32 / ESP32-CAM                           |
+| **Sensing**                 | MPU6050, GPS                                |
+| **Communication**           | GSM, Wi-Fi                                  |
+| **Wireless Services**       | SMS, Voice Call, Telegram                   |
+| **Edge Intelligence**       | TinyML / Voice Recognition                  |
+| **Development Environment** | Arduino IDE                                 |
+| **Programming**             | Embedded C/C++                              |
+| **My Role**                 | Contributing Team Member                    |
+
+---
+
+## 🔬 Project Overview
+
+The **Personal Safety Device for Women** was developed as a collaborative Master's-level project in Embedded Systems.
+
+The project explores how **embedded sensing, wireless communication, IoT connectivity, location tracking, and edge intelligence** can be integrated into a compact safety-oriented system.
+
+The overall system incorporates an ESP32-based embedded platform together with sensors, GPS/GSM communication, Wi-Fi connectivity, camera functionality, and TinyML-based voice recognition.
+
+**Important:** This was a **collaborative project**, and I was a contributing team member rather than the primary developer. My contribution focused on **technical documentation, sensor-output verification, GPS/GSM integration testing, and supporting system-level testing and integration activities**.
+
+---
+
+# 🎯 Project Objective
+
+The project aimed to explore an embedded IoT architecture capable of responding to predefined emergency-related events through:
+
+* Sensor-based event detection
+* Location acquisition
+* GSM-based communication
+* Wi-Fi connectivity
+* Camera-based image capture
+* Voice-triggered assistance
+* Remote notification through IoT services
+
+The project provided practical exposure to the integration of multiple embedded hardware and communication technologies within a single system.
+
+---
+
+# 🧩 System Architecture
+
+The overall system can be understood through the following engineering flow:
+
+**Sensing → Embedded Processing → Event Detection → Communication → IoT Connectivity → User Alert**
+
+The major functional components include:
+
+1. **Sensor & Emergency Detection**
+2. **GPS/GSM Communication**
+3. **Voice Recognition using TinyML**
+4. **ESP32-CAM & Wi-Fi Connectivity**
+5. **Remote Alert and Notification**
+
+---
+
+## 🏗️ System Block Diagram
+
+<p align="center">
+  <img src="Images/Block_diagram.png" width="600">
+</p>
+
+---
+
+# ⚙️ Technical Modules
+
+## 1. GPS, GSM & Sensor Module
+
+The embedded system incorporates:
+
+* **MPU6050** for motion sensing
+* **NEO-6M GPS** for location acquisition
+* **SIM800L GSM** module for communication
+* Emergency and safety-status inputs
+
+The project architecture uses sensor information to identify predefined events and initiate communication mechanisms such as SMS and voice calls.
+
+My involvement in this area included **verifying sensor data outputs and assisting with GPS/GSM integration testing**.
+
+---
+
+## 2. TinyML-Based Voice Recognition
+
+The project incorporates **TinyML-based voice recognition** using:
+
+* Edge Impulse
+* Embedded processing
+* Voice command recognition
+* `"HELP"` as the emergency voice command
+
+This demonstrates the use of **edge-level intelligence** within an embedded IoT application, where voice recognition can be incorporated into the device rather than relying entirely on external processing.
+
+> **Note:** I do not claim sole development or ownership of the TinyML model. It is presented here as part of the overall collaborative project.
+
+---
+
+## 3. ESP32-CAM & Wi-Fi Module
+
+The system also incorporates an **ESP32-CAM** for:
+
+* Image capture
+* Wi-Fi connectivity
+* SOS-related communication
+* Remote image transmission through Telegram
+
+This component demonstrates the integration of **embedded vision, wireless connectivity, and IoT-based communication**.
+
+---
+
+# 🔌 Communication Interfaces
+
+One of the technically important aspects of the project is the interaction between different embedded components and communication technologies.
+
+| Interface / Technology | Application                                       |
+| ---------------------- | ------------------------------------------------- |
+| **UART**               | Serial communication with modules such as GPS/GSM |
+| **I²C**                | Communication with the MPU6050 sensor             |
+| **GSM**                | SMS and voice-call communication                  |
+| **Wi-Fi**              | IoT connectivity and remote communication         |
+| **GPS**                | Location acquisition                              |
+| **Telegram**           | Remote notification / image communication         |
+
+This combination provided practical exposure to **embedded communication interfaces and connected-device architecture**.
+
+---
+
+# 🧠 Embedded & IoT Concepts
+
+The project provided exposure to several important concepts relevant to embedded and IoT engineering:
+
+### Embedded Systems
+
+* Microcontroller-based system design
+* Sensor interfacing
+* Peripheral communication
+* Hardware–software integration
+* Event-driven embedded operation
+
+### IoT
+
+* Wireless connectivity
+* Remote notification
+* Connected embedded devices
+* Cloud/service-based communication
+* Device-to-user communication
+
+### Edge Intelligence
+
+* TinyML
+* Embedded voice recognition
+* Local event detection
+* Edge-level processing
+
+### Communication Systems
+
+* UART
+* I²C
+* GSM communication
+* GPS communication
+* Wi-Fi networking
+
+---
+
+# 👩‍💻 My Technical Contribution
+
+This section intentionally distinguishes **my contribution** from the overall project development.
+
+I was a **contributing team member** in this collaborative Master's project.
 
 My involvement included:
 
-* Contributing to the technical documentation of the project.
-* Verifying sensor-data outputs during development and testing.
-* Assisting with integration testing of the **GPS and GSM modules**.
-* Working with the team during integration of the embedded communication components.
-* Supporting the testing and documentation of the developed system.
+* Technical documentation of the project
+* Verification of sensor data outputs
+* Assistance with GPS integration testing
+* Assistance with GSM integration testing
+* Supporting system-level integration activities
+* Supporting testing and documentation
+* Working with the project team during hardware/software integration
 
-The overall project design and primary development were led by my colleague. This repository is therefore presented as evidence of my **collaborative engineering experience and practical exposure to embedded and IoT systems**.
+### Contribution Scope
 
----
+I **do not claim sole ownership, primary development, or independent implementation of the complete system**.
 
-## 🎯 Project Objective
-
-The project aimed to develop a multi-functional embedded safety system capable of providing different mechanisms for emergency detection, location identification, and communication.
-
-The system explored:
-
-* Emergency triggering
-* Fall detection
-* GPS-based location tracking
-* GSM-based calling and SMS
-* Voice-based emergency keyword detection
-* Wi-Fi communication
-* Camera-based image capture
-* Telegram-based alert communication
-* Safety-status notification
+The overall project design and primary development were led by another team member. My role was focused on the contribution areas described above.
 
 ---
 
-## 🛠️ Technologies & Components
+# 🛠️ Skills Demonstrated
 
-| Category                | Technology / Component |
-| ----------------------- | ---------------------- |
-| Embedded Platforms      | ESP32-S3, ESP32-CAM    |
-| Motion Sensor           | MPU6050                |
-| GPS                     | NEO-6M                 |
-| GSM                     | SIM800L                |
-| Audio Input             | PDM Microphone         |
-| Wireless Communication  | Wi-Fi                  |
-| Messaging               | Telegram Bot API       |
-| TinyML                  | Edge Impulse           |
-| Development Environment | Arduino IDE            |
-| Programming             | Embedded C++           |
+Through my contribution and involvement with the project, I gained practical exposure to:
 
----
-
-## ⚙️ System Architecture
-
-The project integrates multiple embedded modules, each responsible for a specific sensing, processing, or communication function.
-
-### 1. GPS & GSM Module
-
-The GPS and GSM subsystem combines the **MPU6050, NEO-6M GPS, and SIM800L GSM module**.
-
-The project explores:
-
-* Motion-based fall detection
-* GPS location acquisition
-* Emergency calling
-* SMS-based alerts
-* Safety-status messaging
-
-The corresponding implementation is included in:
-
-`Code/Appendix_A.ino`
+**Embedded Systems**
+**IoT**
+**ESP32**
+**ESP32-CAM**
+**Embedded C/C++**
+**Arduino IDE**
+**Sensor Interfacing**
+**MPU6050**
+**GPS**
+**GSM**
+**UART**
+**I²C**
+**Wi-Fi**
+**Hardware–Software Integration**
+**System Testing**
+**Debugging & Verification**
+**TinyML / Edge AI**
 
 ---
 
-### 2. TinyML Voice Recognition
+# 🖥️ Hardware & Technologies
 
-The project also incorporates **TinyML-based voice recognition** using **Edge Impulse**.
+### Hardware
 
-The voice-recognition module is designed to recognize the emergency keyword:
+* ESP32
+* ESP32-CAM
+* MPU6050
+* NEO-6M GPS
+* SIM800L GSM
+* PDM Microphone
 
-**"HELP"**
+### Software & Platforms
 
-The corresponding implementation is included in:
-
-`Code/Appendix_B.ino`
-
-This component provided exposure to the integration of **machine-learning inference with embedded systems**.
-
----
-
-### 3. ESP32-CAM & Wi-Fi Module
-
-The **ESP32-CAM** is used for image capture and wireless communication.
-
-The project includes functionality for:
-
-* Image capture
-* Wi-Fi communication
-* SOS alert communication
-* Sending captured images to a registered user through Telegram
-
-The corresponding implementation is included in:
-
-`Code/Appendix_C.ino`
+* Arduino IDE
+* Embedded C/C++
+* Edge Impulse
+* Telegram Bot API
 
 ---
 
-## 🔄 Overall Communication Flow
+# 📐 Circuit Design
 
-```text
-Emergency Event
-       │
-       ▼
-Embedded System
-       │
-       ├──────────► GPS / GSM ──────► Call / SMS + Location
-       │
-       ├──────────► TinyML ──────────► "HELP" Detection
-       │
-       └──────────► ESP32-CAM ───────► Image + Alert
-                                      │
-                                      ▼
-                                   Telegram
-                                      │
-                                      ▼
-                               Registered User
-```
-
-This architecture demonstrates the integration of **embedded sensing, processing, and communication technologies** within a single collaborative system.
+<p align="center">
+  <img src="Images/Circuit_diagram.png" width="600">
+</p>
 
 ---
 
-## 📊 Demonstrated Functions
+# 🔄 System Flow
 
-The project documentation includes demonstrations of:
-
-* Emergency call alert
-* GPS location tracking
-* Captured image transmission
-* Safe-message notification
-* Safety-status notification
-
-The corresponding diagrams, screenshots, and project results are preserved in the `Images/` directory.
+<p align="center">
+  <img src="Images/Flowchart.png" width="600">
+</p>
 
 ---
 
-## 🖼️ Project Documentation
+# 📸 Functional Demonstration
 
-### Block Diagram
+The repository contains visual documentation of the project's different functional components.
 
-![Block Diagram](Images/Block_diagram.png)
+## Emergency Call / Alert
 
-### Circuit Diagram
+<p align="center">
+  <img src="Images/Call_Alert.png" width="450">
+</p>
 
-![Circuit Diagram](Images/Circuit_diagram.png)
+## Captured Image
 
-### Flowchart
+<p align="center">
+  <img src="Images/Captured_Image.png" width="450">
+</p>
 
-![Flowchart](Images/Flowchart.png)
+## GPS Location
 
-### Emergency Call Alert
+<p align="center">
+  <img src="Images/GPS_Location.png" width="450">
+</p>
 
-![Call Alert](Images/Call_Alert.png)
+## Safety Message
 
-### Captured Image Transmission
+<p align="center">
+  <img src="Images/SafeMessage.png" width="450">
+</p>
 
-![Captured Image](Images/Captured_Image.png)
+## Safety Status
 
-### GPS Location Tracking
+<p align="center">
+  <img src="Images/Safenow.png" width="450">
+</p>
 
-![GPS Location](Images/GPS_Location.png)
+## Project Result
 
-### Safe Message
-
-![Safe Message](Images/SafeMessage.png)
-
-### Safety Status
-
-![Safety Status](Images/Safenow.png)
-
-### Project Result
-
-![Project Result](Images/Result.png)
+<p align="center">
+  <img src="Images/Result.png" width="500">
+</p>
 
 ---
 
-## 💻 Source Code
+# 🧪 System Integration Perspective
 
-The repository contains three Arduino source files corresponding to the major functional modules:
+A major engineering aspect of this project was the integration of multiple independent embedded components into a connected system.
+
+The project brings together:
+
+**Sensors**
+
+↓
+
+**Embedded Controller**
+
+↓
+
+**Event Detection**
+
+↓
+
+**GPS / GSM / Wi-Fi Communication**
+
+↓
+
+**Remote Notification**
+
+This type of integration highlights the importance of **hardware–software co-design, communication interfaces, system verification, and reliable interaction between embedded subsystems**.
+
+---
+
+# 📚 Source Code & Documentation
+
+The repository contains the implementation appendices associated with the collaborative project:
 
 ```text
 Code/
@@ -208,74 +337,81 @@ Code/
 └── Appendix_C.ino
 ```
 
-These files document the embedded implementations associated with the project's GPS/GSM, voice-recognition, and ESP32-CAM/Wi-Fi components.
-
----
-
-## 📚 Project Documentation
-
-The complete project report is available in:
-
-`ProjectReport.pdf`
-
-The report contains the detailed project description, system architecture, implementation, results, and supporting references.
-
----
-
-## 🧠 Technical Skills Developed
-
-Through my contribution to this project, I gained practical exposure to:
-
-* **Embedded Systems**
-* **ESP32 development**
-* **IoT communication**
-* **GPS interfacing**
-* **GSM communication**
-* **Sensor interfacing**
-* **UART-based communication**
-* **I2C-based communication**
-* **Wi-Fi communication**
-* **Camera interfacing**
-* **TinyML / Edge AI**
-* **Arduino IDE**
-* **Embedded C/C++**
-* **Hardware–software integration**
-* **System integration and testing**
-
-The project particularly strengthened my understanding of how different embedded modules can be integrated to build a larger IoT-oriented system.
-
----
-
-## 🔬 Research & Technical Relevance
-
-Although this was a collaborative academic project, it provided valuable exposure to the design and integration challenges involved in **intelligent embedded and IoT systems**.
-
-The project connects several areas of interest:
-
-**Embedded Systems → IoT → Edge Intelligence → Communication Systems → Hardware–Software Integration**
-
-The inclusion of TinyML-based voice recognition also provided an introduction to bringing machine-learning capabilities closer to an embedded device.
-
-This experience contributes to my broader technical interests in:
-
-**Embedded Systems • Edge AI • IoT • Real-Time Systems • Communication Systems • Hardware–Software Co-Design**
-
----
-
-## ⚠️ Scope & Authorship
-
-This repository documents a **collaborative academic project**.
-
-I do not claim sole authorship of the system. My role was as a **contributing team member**, with involvement in documentation, sensor-data verification, GPS/GSM integration testing, and collaborative system integration.
-
-The repository is intended to demonstrate my **team-based engineering experience and technical exposure**, rather than present the complete system as my individual work.
-
----
-
-## 📂 Repository Structure
+The complete project report is also included:
 
 ```text
-Personal-Safety-Device-for-Women/
+ProjectReport.pdf
+```
+
+The source code and report are retained as part of the project's academic documentation.
+
+---
+
+# 🔬 Research Perspective
+
+Although this project was primarily an academic engineering project rather than an independent research project, it contributed to my practical exposure to areas that are relevant to my broader research interests.
+
+The project connects several areas of embedded research:
+
+**Embedded Systems**
+↓
+**Sensor Integration**
+↓
+**IoT Connectivity**
+↓
+**Wireless Communication**
+↓
+**Edge Intelligence**
+↓
+**Hardware–Software Integration**
+
+These areas are closely related to my broader interests in:
+
+* Embedded Systems
+* IoT
+* Edge AI
+* Real-Time Systems
+* Communication Systems
+* Hardware–Software Co-Design
+* Intelligent Embedded Systems
+
+The experience particularly strengthened my interest in understanding how **resource-constrained embedded platforms can sense, process, communicate, and respond intelligently in connected environments**.
+
+---
+
+# 🎓 Academic & PhD Relevance
+
+This project is included in my portfolio not as a claim of independent project ownership, but as evidence of my exposure to **system-level embedded engineering and IoT technologies**.
+
+My contribution allowed me to work around:
+
+* Embedded sensor interfaces
+* GPS/GSM communication
+* IoT connectivity
+* Hardware/software integration
+* System testing and verification
+* Documentation of an integrated embedded system
+
+These experiences complement my broader academic interests in **Embedded Systems, IoT, Edge AI, Real-Time Systems, and intelligent connected devices**.
+
+---
+
+# ⚠️ Scope & Limitations
+
+* This was a **collaborative Master's academic project**.
+* I was a **contributing team member**, not the primary developer.
+* The README does not attribute the complete system design or implementation to me.
+* My stated contribution is limited to the activities described in the **My Technical Contribution** section.
+* The project is presented as an **academic embedded/IoT prototype**.
+* It should not be interpreted as a production-ready or clinically validated safety system.
+* Technical capabilities described here correspond to the project's documented architecture and implementation.
+
+---
+
+# 📂 Repository Structure
+
+```text
+Personal-safety-device-for-women/
 │
 ├── Code/
 │   ├── Appendix_A.ino
@@ -299,22 +435,34 @@ Personal-Safety-Device-for-Women/
 
 ---
 
-## 👩‍💻 Author
+# 👩‍🔬 About My Role
 
-**Khatija Mahveen**
+**Role:** Contributing Team Member
+**Program:** M.E. Embedded Systems
+**Project Area:** Embedded Systems & IoT
 
-M.E. Embedded Systems
-Electronics & Communication Engineering
+My contribution to this collaborative project focused on **documentation, sensor-output verification, GPS/GSM integration testing, and system-level testing support**.
 
-**Technical Interests:**
-Embedded Systems • Edge AI • IoT • Real-Time Systems • Communication Systems • Hardware–Software Co-Design
+I include this project in my portfolio to demonstrate my practical exposure to **embedded systems, IoT communication, sensor integration, and hardware–software integration** while maintaining clear attribution of the overall project work.
+
+---
+
+# 🚀 Technical Interests
+
+My broader technical interests include:
+
+**Embedded Systems • IoT • Edge AI • TinyML • Real-Time Systems • Communication Systems • Hardware–Software Co-Design • Intelligent Connected Devices**
 
 ---
 
 ## 📌 Project Summary
 
-**Personal Safety Device for Women** is a collaborative M.E. Embedded Systems project integrating **embedded sensing, GPS/GSM communication, TinyML-based voice recognition, Wi-Fi, camera-based image capture, and IoT communication**.
+> **A collaborative M.E. Embedded Systems project integrating sensing, wireless communication, IoT connectivity, and edge intelligence. My contribution focused on technical documentation, sensor-output verification, GPS/GSM integration testing, and system-level testing support.**
 
-My contribution to the project provided practical experience in **sensor-data verification, GPS/GSM integration testing, technical documentation, and collaborative embedded-system development**.
+---
 
-The project strengthened my understanding of how multiple embedded and communication technologies can be integrated into a single IoT-oriented system.
+### Repository Contents
+
+📁 **Source Code** — Embedded implementation appendices
+📁 **Images** — Architecture, circuit, flowchart and functional documentation
+📄 **Project Report** — Complete academic project documentation
