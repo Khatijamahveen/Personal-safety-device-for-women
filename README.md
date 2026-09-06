@@ -4,7 +4,7 @@
 This repository documents a collaborative Master's project focusing on the design and development of a **Personal Safety Device for Women**. The system is designed to provide immediate assistance and alerting mechanisms during emergencies, leveraging embedded systems and IoT technologies.
 
 ## 🤝 Authorship & Honesty Statement
-**I, Khatija Mahveen, was a contributing team member on this project.** The core design, primary development, and thesis were led by my colleague. My contribution involved [Insert exactly what you helped with here - e.g., testing the sensor modules, reviewing the code, debugging the connections, etc.].
+**I, Khatija Mahveen, was a contributing team member on this project.** The core design, primary development, and thesis were led by my colleague. My contribution involved collaborating on the technical documentation, verifying the sensor data outputs, and assisting with the integration testing of the GPS and GSM modules.
 
 *I have uploaded this repository to showcase my ability to work in a collaborative research team, but I do not claim sole ownership of this project. Full credit for the overall design and implementation goes to the primary author.*
 
@@ -25,42 +25,42 @@ The device integrates multiple modules for a comprehensive safety solution:
 ## 📊 Project Results
 
 **Figure 1: Block Diagram**
-<img src="Images/Block_diagram.png" alt="Block Diagram" width="600"/>
+<img src="Images/Block_diagram.png" alt="Block Diagram" width="400"/>
 
 <br>
 
 **Figure 2: Circuit Diagram**
-<img src="Images/Circuit_diagram.png" alt="Circuit Diagram" width="600"/>
+<img src="Images/Circuit_diagram.png" alt="Circuit Diagram" width="400"/>
 
 <br>
 
 **Figure 3: Flowchart**
-<img src="Images/Flowchart.png" alt="Flowchart" width="600"/>
+<img src="Images/Flowchart.png" alt="Flowchart" width="400"/>
 
 <br>
 
 **Figure 4: Call Alert System**
-<img src="Images/Call_Alert.png" alt="Call Alert" width="600"/>
+<img src="Images/Call_Alert.png" alt="Call Alert" width="400"/>
 
 <br>
 
 **Figure 5: Captured Image Transmission**
-<img src="Images/Captured_Image.png" alt="Captured Image" width="600"/>
+<img src="Images/Captured_Image.png" alt="Captured Image" width="400"/>
 
 <br>
 
 **Figure 6: GPS Location Tracking**
-<img src="Images/GPS_Location.png" alt="GPS Location" width="600"/>
+<img src="Images/GPS_Location.png" alt="GPS Location" width="400"/>
 
 <br>
 
 **Figure 7: Safe Message Alert**
-<img src="Images/SafeMessage.png" alt="Safe Message" width="600"/>
+<img src="Images/SafeMessage.png" alt="Safe Message" width="400"/>
 
 <br>
 
 **Figure 8: Safety Status Notification**
-<img src="Images/Safenow.png" alt="Safe Now" width="600"/>
+<img src="Images/Safenow.png" alt="Safe Now" width="400"/>
 
 <br>
 
