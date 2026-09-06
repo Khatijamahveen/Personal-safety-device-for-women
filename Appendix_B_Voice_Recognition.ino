@@ -1,30 +1,20 @@
 /*
  * APPENDIX B
  * Voice Recognition Module
- * (Machine Learning-Based HELP Detection using ESP32 - Xiao)
+ * (Machine Learning-Based HELP Detection using ESP32 - XIAO ESP32S3 Sense)
+ * 
+ * Project: Personal Safety Device for Women
+ * Author: Azmath | Contributing Member: Khatija Mahveen
+ * 
+ * Note: This code utilizes Edge Impulse (TinyML) to run a trained neural network
+ * on an embedded microcontroller to detect the spoken keyword "HELP".
  */
 
 // If your target is limited in memory remove this macro to save 10K RAM
 #define EIDSP_QUANTIZE_FILTERBANK 0
 
-/*
- * NOTE: If you run into TFLite arena allocation issue.
- *
- * This may be due to may dynamic memory fragmentation.
- * Try defining "-DEI_CLASSIFIER_ALLOCATION_STATIC" in boards.local.txt (create
- * if it doesn't exist) and copy this file to
- * `<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`.
- *
- * See
- * (https://support.arduino.cc/hc/en-us/articles/360012076960-Where-are-the-installed-cores-located-)
- * to find where Arduino installs cores on your machine.
- *
- * If the problem persists then there's not enough memory for this model and application.
- * Tested with ESP32 Boards package version 2.0.16
- */
-
 /* Includes ---------------------------------------------------------------- */
-#include <women_safty_inferencing.h>
+#include <women_safety_inferencing.h> // Fixed spelling of "safety"
 #include <I2S.h>
 
 #define SAMPLE_RATE 16000U
@@ -41,10 +31,10 @@ typedef struct {
 static inference_t inference;
 static const uint32_t sample_buffer_size = 2048;
 static signed short sampleBuffer[sample_buffer_size];
-static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
+static bool debug_nn = false; // Set to true to see features generated from raw signal
 static bool record_status = true;
 
-#define HELP_OUT_PIN D4 // choose any free GPIO (example: GPIO10)
+#define HELP_OUT_PIN D4 // GPIO for triggering alert (e.g., LED or external module)
 
 /**
  * @brief Arduino setup function
@@ -160,6 +150,9 @@ void loop()
 #endif
 }
 
+/**
+ * @brief Audio callback function to process captured samples
+ */
 static void audio_inference_callback(uint32_t n_bytes)
 {
   for (int i = 0; i < n_bytes >> 1; i++)
@@ -173,6 +166,9 @@ static void audio_inference_callback(uint32_t n_bytes)
   }
 }
 
+/**
+ * @brief Task function to continuously capture audio samples from I2S
+ */
 static void capture_samples(void *arg)
 {
   const int32_t i2s_bytes_to_read = (uint32_t)arg;
