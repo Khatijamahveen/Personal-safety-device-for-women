@@ -2,12 +2,24 @@
  * APPENDIX C
  * Wi-Fi & Camera-Based Alert System
  * (Telegram Image Transmission Module)
+ * 
+ * Project: Personal Safety Device for Women
+ * Author: Azmath Tabassum | Contributing Member: Khatija Mahveen
+ *
+ * NOTE: This module uses the ESP32-CAM to capture and transmit images
+ * and SOS alerts to a registered user via the Telegram Bot API.
+ * 
+ * SECURITY NOTE: Replace all placeholder credentials with your own before deploying.
  */
 
-const char* ssid = "ACTFIBERNET";     // your network SSID
-const char* password = "act12345";    // your network password
-String myToken = "8160911844:AAHNHmydDuEPwtqM4MUWAgyc0MKR7OxmUtI"; // Create your bot and get the token -> https://telegram.me/fatherbot
-String myChatId = "7723359682";       // Get chat_id -> https://telegram.me/chatid_echo_bot
+const char* ssid = "YOUR_WIFI_SSID";          // Replace with your network SSID
+const char* password = "YOUR_WIFI_PASSWORD";  // Replace with your network password
+
+// Create your bot and get the token -> https://telegram.me/fatherbot
+String myToken = "YOUR_TELEGRAM_BOT_TOKEN"; 
+
+// Get chat_id -> https://telegram.me/chatid_echo_bot
+String myChatId = "YOUR_TELEGRAM_CHAT_ID";    
 
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
@@ -24,6 +36,7 @@ const unsigned long ALERT_INTERVAL = 15000; // 15 seconds
 bool lastSafeButtonState = HIGH;
 bool lastHelpButtonState = HIGH;
 
+// ---------------- ESP32-CAM Pin Definitions ----------------
 #define PWDN_GPIO_NUM     32
 #define RESET_GPIO_NUM    -1
 #define XCLK_GPIO_NUM      0
@@ -80,10 +93,7 @@ void setup()
   //
   // WARNING!!! PSRAM IC required for UXGA resolution and high JPEG quality
   // Ensure ESP32 Wrover Module or other board with PSRAM is selected
-  // Partial images will be transmitted if image exceeds buffer size
   //
-  // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
-  // for larger pre-allocated frame buffer.
   if (psramFound())
   {
     config.frame_size = FRAMESIZE_UXGA;
@@ -105,14 +115,14 @@ void setup()
   }
 
   sensor_t * s = esp_camera_sensor_get();
-  // initial sensors are flipped vertically and colors are a bit saturated
+  // Initial sensors are flipped vertically and colors are a bit saturated
   if (s->id.PID == OV3660_PID)
   {
     s->set_vflip(s, 1);       // flip it back
     s->set_brightness(s, 1);  // up the brightness just a bit
     s->set_saturation(s, -2); // lower the saturation
   }
-  // drop down frame size for higher initial frame rate
+  // Drop down frame size for higher initial frame rate
   s->set_framesize(s, FRAMESIZE_SVGA);
 
   ledcAttachPin(4, 4);
